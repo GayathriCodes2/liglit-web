@@ -93,47 +93,53 @@ export default function Home() {
       <div className="relative">
         {/* Hero Section with image at the end (right side) */}
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[radial-gradient(circle_at_top_right,#fcd253_0%,#fff_70%)] pointer-events-none"></div>
-        <section className="h-screen w-full overflow-hidden">
-          <div className="h-full md:mx-16 xs:mx-0 pt-24 py-24 grid md:grid-cols-2 gap-12 relative">
-            
-            {/* LEFT TEXT */}
-            <div className="flex flex-col justify-center space-y-8 z-10">
-              <p className="text-sm font-bold text-amber-700 tracking-wider uppercase">
-                Creative Product Solution
-              </p>
+        <section className="h-screen w-full bg-white flex items-center overflow-hidden">
+  <div className="h-full md:mx-16 xs:mx-0 px-6 py-24 grid md:grid-cols-2 gap-12 relative">
 
-              <HoverHeading
-                as="h1"
-                className="inline-block text-5xl md:text-6xl font-bold leading-tight text-transparent bg-clip-text"
-              >
-                Building Smart Solutions for a Smarter Future
-              </HoverHeading>
+    {/* LEFT TEXT */}
+    <div className="flex flex-col justify-center space-y-8 z-10">
+      <p className="text-sm font-bold text-amber-700 tracking-wider uppercase">
+        Creative Product Solution
+      </p>
 
-              <p className="text-lg text-gray-600 leading-relaxed max-w-xl">
-                Lorem ipsum dolor sit amet consectetur. Urna tincidunt urna egestas rhoncus Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, eius incidunt. Eligendi, tenetur maiores deserunt inventore doloribus mollitia nihil, eos fugiat quidem voluptate rem ab! Eius atque cupiditate quo optio?
-              </p>
-              
-              <button className="bg-[#4b341d] text-[#fecd36] px-6 py-3 rounded-xl shadow-lg font-semibold hover:opacity-90 transition w-fit">
-                Get Started
-              </button>
-            </div>
+      <HoverHeading
+        as="h1"
+        className="inline-block text-6xl md:text-7xl font-extrabold leading-[1.1] 
+        bg-gradient-to-r from-[#4b341d] to-[#fecd36] text-transparent bg-clip-text"
+      >
+        Building Smart Solutions for a Smarter Future
+      </HoverHeading>
 
-            {/* RIGHT SIDE - Image at the end of section */}
-            <div className="relative flex justify-end items-center h-full">
-              <div className="relative w-full h-full max-w-[600px] max-h-[600px]">
-                <Image
-                  src={heroImage.src}
-                  alt="Banner image"
-                  fill
-                  className="object-contain drop-shadow-2xl"
-                  priority
-                  sizes="(max-width: 600px) 100vw, 50vw"
-                />
-              </div>
-            </div>
+      <p className="text-lg text-gray-600 leading-relaxed max-w-xl">
+        Lorem ipsum dolor sit amet consectetur. Urna tincidunt urna egestas rhoncus Lorem ipsum
+        dolor sit amet consectetur adipisicing elit. Perferendis, eius incidunt. Eligendi, 
+        tenetur maiores deserunt inventore doloribus mollitia nihil.
+      </p>
 
-          </div>
-        </section>
+      <button className="bg-[#4b341d] text-[#fecd36] px-8 py-4 rounded-xl shadow-xl 
+      hover:shadow-2xl hover:scale-[1.03] transition font-semibold w-fit">
+        Get Started
+      </button>
+    </div>
+
+    {/* RIGHT IMAGE */}
+    <div className="relative flex justify-center items-center h-full">
+      <div className="relative w-[90%] h-[90%] max-w-[750px] max-h-[750px]">
+        <Image
+          src={heroImage.src}
+          alt="Banner image"
+          fill
+          className="object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.2)] 
+          animate-[float_6s_ease-in-out_infinite]"
+          priority
+          sizes="(max-width: 600px) 100vw, 50vw"
+        />
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
         {/* About Us Section */}
         <section className="py-24 bg-white">
